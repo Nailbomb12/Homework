@@ -1,12 +1,13 @@
-import React from "react"
-import styles from "./Profile.module.css"
-import PropTypes from "prop-types"
-import Avatar from "../Avatar/Avatar"
+import Avatar from '../Avatar/Avatar'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styles from './Profile.module.css'
 
-const Profile = prop => {
-  const { name, tag, location, stats, avatar } = prop
+// Обычно переменную называют props, а не prop
+// деструктуризацию можно делать в аргументах
+const Profile = ({ name, tag, location, stats, avatar }) => {
   const { followers, views, likes } = stats
-  // console.log(prop)
+
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
